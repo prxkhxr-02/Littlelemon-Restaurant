@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>Feedback</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <form action="{% url 'feedback' %}" method="post">
+          {% csrf_token %}
+          {{feed.as_p}}
+          <input type="submit" id="button">
+        </form>
+        <p style="color: green; font-size: 3rem;">Average Rating: {{ average_rating }}</p>
+        <i style="font-size: 1.8rem;">Customer reviews : </i>
+        <ul>
+            {% for feedback in feedbacks %}
+                <li>&#x2022; {{ feedback.Give_a_Valueable_feedback }} - Rating: {{ feedback.get_rating_display }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+        <p style="text-align: justify;">Welcome, esteemed diners and culinary enthusiasts! At Little Lemon Restaurant, we hold your experience as our highest priority. Your thoughts and feedback provide us with invaluable insights that guide us on our mission to deliver exceptional dining moments.</p>
+      </div>
+      <div class="column">
+        <figure class="figure">
+          <img
+            src="{% static 'img/feedback.jpg' %}"
+            alt="Mario and Adrian"
+          />
+          <figcaption class="figure-caption">
+            Feedback.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section>
+  <article>
+    <h1>Contact Us</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column" style="text-align: justify;">
+        <h2>Connect with Us: Your Voice Matters!</h2>
+        <p>
+          We deeply appreciate your decision to dine at Little Lemon Restaurant. Your experience is of the utmost importance to us, and we're eager to hear your thoughts. Your feedback guides our continuous efforts to provide exceptional dining moments.
+        </p>
+        <p>
+          Should you wish to share your impressions, ideas, or suggestions, we're just a message away. Feel free to reach out to us through any of the following channels:
+        </p>
+        <p>
+          <b>Customer Feedback Hotline:</b>
+          Our dedicated team is ready to listen. Call us at <i> <a href="tel:+917074532350">+91 7074532350</a></i> to share your experience.
+        </p>
+        <p>
+          <b>Online Feedback Form:</b>
+          Visit our website at <a href="{% url 'feedback' %}">'FEEDBACK'</a> to find our online feedback form. Your comments will reach us directly, and we value each one.
+        </p>
+        <p>
+          <b>Social Media:</b>
+          Follow us on our Social Media Platforms for updates and exclusive content. Drop us a message or tag us in your posts we're excited to engage with you.
+          <ol>
+            <li><a href="https://instagram.com/ankurr28?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100034497253702&mibextid=ZbWKwL">Facebook</a></li>
+            <li><a href="https://github.com/ankur0360">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ankur-roy-49a042251">LinkedIn</a></li>
+          </ol>
+        </p>
+        <p>
+          <b>Email:</b>
+          Send us an email at <a href="mailto:ankur.roy_cs21@gla.ac.in">ankur.roy_cs21@gla.ac.in</a> to share your thoughts, stories, or inquiries. We're here to respond promptly.
+        </p>
+        <p>
+          Your feedback helps us raise the bar and create memorable experiences for all our patrons. Thank you for being an integral part of our culinary journey. We look forward to hearing from you and welcoming you back to Little Lemon Restaurant soon!
+        </p>
+      </div>
+      <div class="column">
+        <figure class="figure">
+          <img
+            src="{% static 'img/restaurant chef C.jpg' %}"
+            alt="Mario and Adrian"
+          />
+          <figcaption class="figure-caption">
+            Little Lemon owner Ankur.
+          </figcaption>
+        </figure>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+{% endblock %}

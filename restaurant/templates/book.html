@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1>Make a reservation</h1>
+    <!--Begin row-->
+    <div class="row">
+      <!--Begin col-->
+      <div class="column">
+        <form action="{% url 'book' %}" method="post" id="form_id">
+          {% csrf_token %}
+          {{form.as_p}}
+          
+          <!-- <input type="submit" id="button"> -->
+          <!-- <input type="submit" id="button"> -->
+           <button id="button">Submit</button>
+        </form>
+      </div>
+      <!--End col-->
+
+      <!--Begin col-->
+      <div class="column">
+        <div class="videowrap">
+          <iframe
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=27.605799176842496,77.59353876113893+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+{% endblock %}

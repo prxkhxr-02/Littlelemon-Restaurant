@@ -1,0 +1,14 @@
+{% load static %}
+<header>
+  <img src="{% static 'img/logo.png' %}" />
+</header>
+<nav>
+  <ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li><a href="{% url 'menu' %}">Menu</a></li>
+    <li><a href="{% url 'book' %}">Booking</a></li>
+    <li><a href="{% url 'contact_us' %}">Contact</a></li>
+    <li><a href="{% url 'feedback' %}">Feedback</a></li>
+  </ul>
+</nav>
